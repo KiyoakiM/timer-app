@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    min-width: 400px;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.timer-icon {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.1em;
+}
+
+.timer-controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timer-controls input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+}
+
+.timer-controls input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.timer-controls input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.control-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+#startBtn {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+}
+
+#startBtn:hover {
+    background: linear-gradient(45deg, #45a049, #3d8b40);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+#pauseBtn {
+    background: linear-gradient(45deg, #ff9800, #f57c00);
+    color: white;
+}
+
+#pauseBtn:hover {
+    background: linear-gradient(45deg, #f57c00, #ef6c00);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+}
+
+#resetBtn {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+    color: white;
+}
+
+#resetBtn:hover {
+    background: linear-gradient(45deg, #d32f2f, #c62828);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.4);
+}
+
+#setTimer {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#setTimer:hover {
+    background: linear-gradient(45deg, #1976D2, #1565C0);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        min-width: 300px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .timer-display {
+        font-size: 3rem;
+    }
+    
+    .control-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
